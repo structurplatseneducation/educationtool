@@ -203,8 +203,8 @@ $('#elementgrid')
   // listen for event
 
   .on('changed.jstree', function (e, data) {
-    $('#elementset').html(data.node.original.text);
-	$('#elementdescset').html(data.node.original.Beskrivning);
+    $('#elementset').html(data.node.text);
+	$('#elementdescset').html(data.node.Beskrivning);
   })
   
 $(document).ready(function() {
@@ -222,7 +222,7 @@ $(document).ready(function() {
 	grid: {
 					columns: [
 						{width: 270, header: "Name"},
-						{width: 450, header: "Beskrivning",value: function(node){return(node.original.Beskrivning);}}
+						{width: 450, header: "Beskrivning",value: function(node){return(node.Beskrivning);}}
 					],
 					width: 900
 				},  
